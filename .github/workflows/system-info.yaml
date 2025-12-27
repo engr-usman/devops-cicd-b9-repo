@@ -1,10 +1,10 @@
 name: System Inforamtion
 
 on:
-    push:
+    workflow_dispatch: {}
 
 jobs:
-    hello-job:
+    system-job:
         runs-on: ubuntu-latest
         
         steps:
