@@ -1,8 +1,7 @@
 name: Node.js CI Pipeline
 
 on:
-  pull_request:
-  push:
+    workflow_dispatch: {}
 
 jobs:
   test:
@@ -19,6 +18,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: node-app-code
 
       - name: Run tests
         run: npm test
+        working-directory: node-app-code
